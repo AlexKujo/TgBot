@@ -34,7 +34,6 @@ def Send_video(chat_id, video_url):
     requests.post(SEND_VIDEO_URL, json={"chat_id": chat_id, "video": video_url})
 
 def Get_tiktok_video_url(url):
-    """ Получение прямой ссылки на видео TikTok """
     try:
         api_url = f"https://www.tikwm.com/api/?url={url}"
         response = requests.get(api_url).json()
