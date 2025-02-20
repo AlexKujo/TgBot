@@ -11,10 +11,9 @@ def lambda_handler(event, context):
     message = body.get("message", {})
     chat_id = message.get("chat", {}).get("id")
     text = message.get("text", "")
-    
 
     if "tiktok.com" not in text:
-        Send_message(chat_id, "жопа")
+        Send_message(chat_id, "Это не ссылка")
     else:
         video_url = Get_tiktok_video_url(text)
         
