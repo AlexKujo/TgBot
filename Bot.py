@@ -27,7 +27,7 @@ def lambda_handler(event, context):
 
 def Send_message(chat_id, text):
     response = requests.post(SEND_MESSAGE_URL, json={"chat_id": chat_id, "text": text})
-    print(response.json())  # <-- Добавь это
+    print(response.json()) 
     return response.json()
 
 def Send_video(chat_id, video_url):
